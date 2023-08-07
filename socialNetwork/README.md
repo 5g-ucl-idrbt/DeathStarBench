@@ -127,7 +127,13 @@ start docker containers by running `docker-compose -f docker-compose-sharding.ym
 ## Development Status
 
 This application is still actively being developed, so keep an eye on the repo to stay up-to-date with recent changes.
-
+## To Down the setup
+```
+docker node ls
+docker swarm leave
+sudo docker kill $(sudo docker ps -q)
+sudo docker rm $(sudo docker ps -a -q)
+```
 ### Planned updates
 
 * Upgraded recommender
