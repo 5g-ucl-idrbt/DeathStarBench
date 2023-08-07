@@ -71,6 +71,23 @@ cd ../socialNetwork
 ```bash
 ../wrk2/wrk -D exp -t <num-threads> -c <num-conns> -d <duration> -L -s ./wrk2/scripts/social-network/compose-post.lua http://localhost:8080/wrk2-api/post/compose -R <reqs-per-sec>
 ```
+This will use the services:
+```
+compose-post-service
+home-timeline-service
+jaeger query
+media-service
+nginx-web-server
+post-storage-service
+social-graph-service
+text-service
+unique-id-service
+url-shorten-service
+user-mention-service
+user-service
+user-timeline-service
+
+```
 
 #### Read home timelines
 
