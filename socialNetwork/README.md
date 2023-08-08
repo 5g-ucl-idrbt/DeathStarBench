@@ -116,6 +116,14 @@ First you could see the login and signup page:
 ![login_page](figures/login.png)
 ![signup_page](figures/signup.png)
 
+* default users:
+username : mark
+password: 123
+username : elon    
+password: 123
+username : bill
+password: 123
+
 In order to load default users into database, visit `http://localhost:8080/main.html` once. Then click compose to post new contents.
 
 After composing a few posts, you could see your own posts in user timeline page. Click follow button on the right side to follow defualt users:
