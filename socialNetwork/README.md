@@ -159,6 +159,22 @@ docker swarm leave
 sudo docker kill $(sudo docker ps -q)
 sudo docker rm $(sudo docker ps -a -q)
 ```
+
+## To collect Logs of individual 
+Running this will create a folder named logs and save the logs with the running docker name
+```
+sudo ./logscripter.sh
+
+```
+## Sorting the logs with respect to time stamps
+This will generate a single file according to the timestamps of the files given to it. 
+```
+cd logs
+sudo ./logsassemble.py
+
+```
+
+
 ### Planned updates
 
 * Upgraded recommender
