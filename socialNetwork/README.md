@@ -180,7 +180,7 @@ sudo docker rm $(sudo docker ps -a -q)
 ## To collect Logs of individual 
 Running this will create a folder named logs and save the logs with the running docker name
 ```
-sudo ./logscripter.sh
+sudo ./logcollector.sh
 
 ```
 ## Sorting the logs with respect to time stamps
