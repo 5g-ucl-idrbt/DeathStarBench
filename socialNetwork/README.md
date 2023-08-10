@@ -71,6 +71,13 @@ cd ../socialNetwork
 ```bash
 ../wrk2/wrk -D exp -t <num-threads> -c <num-conns> -d <duration> -L -s ./wrk2/scripts/social-network/compose-post.lua http://localhost:8080/wrk2-api/post/compose -R <reqs-per-sec>
 ```
+Using curl command to do the POST
+```
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "username=username_123&user_id=123&text=$(cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 256 | head -n 1)&media_ids=[]&media_types=[]&post_type=0" \
+     http://localhost:8080/wrk2-api/post/compose
+
+```
 This will use the services:
 ```
 compose-post-service
