@@ -12,8 +12,11 @@ container_ids=$(docker ps -q)
 # Loop through each container and collect logs
 for container_id in $container_ids; do
     container_name=$(docker inspect --format '{{.Name}}' "$container_id" | sed 's|/||')
-    docker logs "$container_id" > "$output_dir/${container_name}_logs.txt"
-    echo "Logs for $container_name saved to $output_dir/${container_name}_logs.txt" 2>&1 > /dev/null
+    #docker logs "$container_id" > "$output_dir/${container_name}_logs.txt" 2>&1 > /dev/null  # if we dont want the stderr lines to be printed in the logs use this line
+    docker logs "$container_id" > "$output_dir/${container_name}_logs.txt" 2>&1
+    echo "Logs for $container_name saved to $output_dir/${container_name}_logs.txt" 
+    
+
 done
 
 echo " *************Log collection completed************* "
