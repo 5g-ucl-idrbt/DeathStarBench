@@ -13,7 +13,7 @@ container_ids=$(docker ps -q)
 for container_id in $container_ids; do
     container_name=$(docker inspect --format '{{.Name}}' "$container_id" | sed 's|/||')
     docker logs "$container_id" > "$output_dir/${container_name}_logs.txt"
-    echo "Logs for $container_name saved to $output_dir/${container_name}_logs.txt"
+    echo "Logs for $container_name saved to $output_dir/${container_name}_logs.txt" 2>&1 > /dev/null
 done
 
 echo " *************Log collection completed************* "
