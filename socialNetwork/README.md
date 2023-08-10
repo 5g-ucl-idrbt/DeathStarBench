@@ -101,7 +101,12 @@ user-timeline-service
 ```bash
 ../wrk2/wrk -D exp -t <num-threads> -c <num-conns> -d <duration> -L -s ./wrk2/scripts/social-network/read-home-timeline.lua http://localhost:8080/wrk2-api/home-timeline/read -R <reqs-per-sec>
 ```
+By using curl
+```
+curl -X GET -H "Content-Type: application/x-www-form-urlencoded" \
+     "http://localhost:8080/wrk2-api/home-timeline/read?user_id=$(shuf -i 0-961 -n 1)&start=$(shuf -i 0-100 -n 1)&stop=$(shuf -i 10-110 -n 1)"
 
+```
 #### Read user timelines
 
 ```bash
