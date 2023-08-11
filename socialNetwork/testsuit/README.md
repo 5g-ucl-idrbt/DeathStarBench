@@ -14,5 +14,5 @@ sudo ./send_postrequests_parallel.sh
 ```
 ### Sequentially
 ```
-sudo ./send_postrequests_sequential.py
+sudo ./send_postrequests_sequential.sh
 ```
