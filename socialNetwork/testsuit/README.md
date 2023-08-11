@@ -10,9 +10,9 @@ python3 logsassemble_epoch.py
 ## For sending multiple POST requests
 ### Parallelly
 ```
-sudo ./send_postrequests_parallelly.sh
+sudo ./send_postrequests_parallel.sh
 ```
 ### Sequentially
 ```
-sudo ./send_postrequests_sequentially.py
+sudo ./send_postrequests_sequential.py
 ```
